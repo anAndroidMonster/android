@@ -19,6 +19,7 @@
         </activity>
 
         <activity android:name=".function.toolBar.ToolBarActivity" />
+        <activity android:name=".function.constraintlayout.ConstraintLayoutActivity" />
     </application>
 
 </manifest>

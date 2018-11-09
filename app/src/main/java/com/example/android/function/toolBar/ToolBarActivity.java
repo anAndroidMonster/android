@@ -1,5 +1,7 @@
 package com.example.android.function.toolBar;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -11,6 +13,11 @@ import com.example.android.R;
 import com.example.android.utils.ToastHelper;
 
 public class ToolBarActivity extends AppCompatActivity {
+
+    public static void enterActivity(Context context){
+        Intent intent = new Intent(context, ToolBarActivity.class);
+        context.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
