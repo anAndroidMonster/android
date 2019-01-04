@@ -4,6 +4,9 @@
     <uses-permission android:name="android.permission.USES_POLICY_FORCE_LOCK" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".common.MyApplication"
@@ -24,6 +27,7 @@
         <activity android:name=".function.toolBar.ToolBarActivity" />
         <activity android:name=".function.constraintlayout.ConstraintLayoutActivity" />
         <activity android:name=".function.lockscreen.LockScreenActivity" />
+        <activity android:name=".function.installApk.InstallApkActivity" />
         <receiver
             android:name=".function.lockscreen.AdminReceiver"
             android:permission="android.permission.BIND_DEVICE_ADMIN" >
@@ -35,6 +39,17 @@
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
+
+        <provider
+            android:authorities="com.example.android.provider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"
+                />
+        </provider>
     </application>
 
 </manifest>
