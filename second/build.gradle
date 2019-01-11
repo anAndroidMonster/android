@@ -1,4 +1,8 @@
-apply plugin: 'com.android.application'
+if (isRunAlone.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
 
 android {
     compileSdkVersion 28
@@ -6,7 +10,9 @@ android {
 
 
     defaultConfig {
-        applicationId "com.example.android.second"
+        if (isRunAlone.toBoolean()){
+            applicationId "com.example.android.second"
+        }
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -23,10 +29,20 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            if (isRunAlone.toBoolean()){
+                manifest.srcFile 'src/main/isRunAlone/AndroidManifest.xml'
+            }else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':lib')
 
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
