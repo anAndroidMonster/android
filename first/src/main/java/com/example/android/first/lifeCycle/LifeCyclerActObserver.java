@@ -1,4 +1,4 @@
-package com.example.android.first.LifeCycler;
+package com.example.android.first.lifeCycle;
 
 import android.arch.lifecycle.Lifecycle;
 import android.arch.lifecycle.LifecycleObserver;

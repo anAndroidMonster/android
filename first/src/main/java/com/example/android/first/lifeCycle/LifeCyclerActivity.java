@@ -1,6 +1,5 @@
-package com.example.android.first.LifeCycler;
+package com.example.android.first.lifeCycle;
 
-import android.arch.lifecycle.LifecycleOwner;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 

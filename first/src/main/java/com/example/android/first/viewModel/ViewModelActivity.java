@@ -1,4 +1,4 @@
-package com.example.android.first.ViewModel;
+package com.example.android.first.viewModel;
 
 import android.arch.lifecycle.ViewModelProvider;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.example.android.first.LifeCycler.LifeCyclerActObserver;
+import com.example.android.first.lifeCycle.LifeCyclerActObserver;
 import com.example.android.first.R;
 
 @Route(path = "/first/ViewModelActivity")

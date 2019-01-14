@@ -6,8 +6,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".FirstMainActivity">
         </activity>
-        <activity android:name=".LifeCycler.LifeCyclerActivity" />
-        <activity android:name=".ViewModel.ViewModelActivity" />
+        <activity android:name=".lifeCycle.LifeCyclerActivity" />
+        <activity android:name=".viewModel.ViewModelActivity" />
     </application>
 
 </manifest>
